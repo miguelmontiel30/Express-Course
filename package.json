@@ -4,21 +4,30 @@
   "description": "A course of express js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/miguelmontiel30/Express-Course.git"
+    "url": "https://github.com/miguelmontiel30/Express-Course"
   },
   "keywords": [
     "Express.js",
     "JS",
-    "ES&"
+    "ES6"
   ],
   "author": "Miguel Montiel",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/miguelmontiel30/Express-Course/issues"
   },
-  "homepage": "https://github.com/miguelmontiel30/Express-Course#readme"
+  "homepage": "https://github.com/miguelmontiel30/Express-Course#readme",
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
 }
