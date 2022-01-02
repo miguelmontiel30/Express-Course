@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
                 data
             ]
         }
-    )
+    );
 });
 
 router.get('/:productID', (req, res) => {
@@ -36,6 +36,18 @@ router.get('/:productID', (req, res) => {
             data: [
                 { productID: productID }
             ]
+        }
+    )
+});
+
+router.post('/', (req, res) => {
+    const body = req.body;
+    res.json(
+        {
+            info: {
+                ruta: 'Ruta POST'
+            },
+            data: body
         }
     )
 });

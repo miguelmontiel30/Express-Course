@@ -7,6 +7,9 @@ const routerApi = require('./routes/index.routes.js')
 const APP = express();
 const PORT = 3000;
 
+// MIDDLEWARE PARA RECIBIR JSON POR POST
+APP.use(express.json());
+
 APP.get('/', (req, res) => {
     res.send('Ruta Principal de routingOrder JS');
 });
