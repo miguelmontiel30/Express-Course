@@ -5,38 +5,13 @@ const express = require('express');
 const APP = express();
 const PORT = 3000;
 
-
 // INITIALIZE THE SERVER
 APP.get('/', (req, res) => {
     res.send('¡Hola Mundo!');
 });
 
-APP.get('/new', (req, res) => {
-    console.log(req);
-    res.send('¡Hola Otra Ruta!');
-});
-
-
-const array_products = [
-    {
-        id: 1,
-        nombre: 'Shampoo',
-        prize: 35.00
-    },
-    {
-        id: 2,
-        nombre: 'Galletas',
-        prize: 10.00
-    }
-];
-
-APP.get('/products/:id', (req, res) => {
-    // console.log(req.params.id);
-
-    const {id} = req.params;
-    console.log(id);
-
-    res.json(array_products);
+router.get('/categories', (req, res) => {
+    res.send('Categorias de Productos');
 });
 
 APP.get('/categories/:idCategory/products/:idProduct', (req, res) => {
